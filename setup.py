@@ -5,7 +5,7 @@ setuptools.setup(
     version="0.1.0",
     author="Matthew Farrellee",
     author_email="matt@cs.wisc.edu",
-    descrption="A playground for document serving",
+    description="A playground for document serving",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/mattf/solsrv",
