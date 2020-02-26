@@ -2,7 +2,7 @@ class Solsrv:
     def __init__(self):
         self.store = {}
 
-    def addDocuments(self, body):
+    def add_documents(self, body):
         accepted = []
         rejected = []
         for doc in body:
@@ -12,7 +12,7 @@ class Solsrv:
                 accepted.append(doc['id'])
         return {"accepted": accepted, "rejected": rejected}
 
-    def addDocument(self, id, body):
+    def add_document(self, id, body):
         if len(id) > 42:  # TODO: why 42?
             return 'Id too long', 400
 
@@ -21,7 +21,7 @@ class Solsrv:
 
         self.store[id] = body
 
-    def getDocument(self, id):
+    def get_document(self, id):
         if id not in self.store:
             return 'Document not found', 404
 

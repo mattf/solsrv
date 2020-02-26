@@ -8,9 +8,9 @@ app = connexion.FlaskApp(__name__)
 
 # setup operationIds
 solsrv = api.Solsrv()
-api.getDocument = solsrv.getDocument
-api.addDocument = solsrv.addDocument
-api.addDocuments = solsrv.addDocuments
+api.getDocument = solsrv.get_document
+api.addDocument = solsrv.add_document
+api.addDocuments = solsrv.add_documents
 api.status = solsrv.status
 
 app.add_api('solsrv.yaml')
